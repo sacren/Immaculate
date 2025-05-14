@@ -1,4 +1,9 @@
 <x-layouts.app title="Dashboard">
+    <!-- Navigation -->
+    <x-slot name="navigation">
+        <x-navbar></x-navbar>
+    </x-slot>
+
     <!-- Header -->
     <x-slot name="header">
         <h1 class="text-2xl font-bold text-gray-800">
