@@ -10,9 +10,9 @@
 </head>
 <body class="min-h-screen bg-gray-50">
     <!-- Navigation -->
-    @if (isset($navigation))
+    @isset($navigation)
         {{ $navigation }}
-    @endif
+    @endisset
 
     <!-- Page Header -->
     @isset($header)
