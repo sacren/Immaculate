@@ -8,6 +8,8 @@ class MakePlan extends Component
 {
     public function render()
     {
-        return view('livewire.make-plan');
+        $name = "We're making a plan.";
+
+        return view('livewire.make-plan', compact('name'));
     }
 }
