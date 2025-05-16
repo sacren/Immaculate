@@ -6,10 +6,10 @@ use Livewire\Component;
 
 class MakePlan extends Component
 {
+    public $name = "We're making a plan.";
+
     public function render()
     {
-        $name = "We're making a plan.";
-
-        return view('livewire.make-plan', compact('name'));
+        return view('livewire.make-plan');
     }
 }
