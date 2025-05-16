@@ -19,7 +19,5 @@
         </div>
     </div>
 
-    <div class="hidden">
-        <livewire:make-plan></livewire:make-plan>
-    </div>
+    <livewire:dummy></livewire:dummy>
 </x-layouts.app>
