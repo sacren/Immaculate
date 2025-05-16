@@ -18,4 +18,8 @@
             <p class="text-gray-600">This is your dashboard content area.</p>
         </div>
     </div>
+
+    <div class="hidden">
+        <livewire:make-plan></livewire:make-plan>
+    </div>
 </x-layouts.app>
