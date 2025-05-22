@@ -1,4 +1,4 @@
-<div class="text-gray-600" wire:target="name">
+<div class="text-gray-600">
     {{ $name }}
 
     <span class="text-red-500 font-bold">
