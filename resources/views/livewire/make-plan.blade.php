@@ -1,9 +1,11 @@
 <div class="p-6 bg-white rounded-lg shadow-md text-gray-600">
     <!-- Display Name and ! -->
     <div class="flex items-center mb-4 space-x-2">
-        <p class="text-lg font-medium">{{ $name }}</p>
+        <p class="text-lg font-medium">{{ $greeting }} {{ $name }}</p>
         <span class="text-red-500 font-bold">
-            @if ($shout) ! @endif
+            @if ($shout)
+                !
+            @endif
         </span>
     </div>
 
@@ -43,5 +45,16 @@
             <input type="text" id="name-lazy" wire:model.lazy="name" wire:change="$refresh"
                 class="px-3 py-2 text-sm border border-green-500 rounded focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
         </div>
+    </div>
+
+    <!-- Dropdown Select -->
+    <div class="mt-4">
+        <label for="greeting" class="block mb-1 text-sm font-medium">Select Greeting:</label>
+        <select id="greeting" name="greeting" wire:model="greeting" wire:change="$refresh"
+            class="w-full px-3 py-2 text-sm border border-green-500 rounded focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+            <option value="Hello!">Hello!</option>
+            <option value="How are you?">How are you?</option>
+            <option value="How do you do?">How do you do?</option>
+        </select>
     </div>
 </div>
