@@ -1,7 +1,10 @@
 <div class="p-6 bg-white rounded-lg shadow-md text-gray-600">
     <!-- Display Name and ! -->
-    <div class="flex items-center mb-4 space-x-2">
-        <p class="text-lg font-medium">{{ $greeting }} {{ $name }}</p>
+    <div class="mb-4 space-y-2">
+        @foreach ($greetings as $greeting)
+            <p class="text-lg font-medium">{{ $greeting }} {{ $name }}</p>
+        @endforeach
+
         <span class="text-red-500 font-bold">
             @if ($shout)
                 !
@@ -50,7 +53,7 @@
     <!-- Dropdown Select -->
     <div class="mt-4">
         <label for="greeting" class="block mb-1 text-sm font-medium">Select Greeting:</label>
-        <select id="greeting" name="greeting" wire:model="greeting" wire:change="$refresh"
+        <select id="greeting" name="greeting" wire:model="greetings" multiple wire:change="$refresh"
             class="w-full px-3 py-2 text-sm border border-green-500 rounded focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
             <option value="Hello!">Hello!</option>
             <option value="How are you?">How are you?</option>

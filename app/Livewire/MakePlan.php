@@ -10,7 +10,7 @@ class MakePlan extends Component
 
     public $shout = false;
 
-    public $greeting = 'Hello!';
+    public $greetings = ['Hello!'];
 
     public function render()
     {
