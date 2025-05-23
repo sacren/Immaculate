@@ -21,6 +21,14 @@
             class="form-checkbox h-5 w-5 text-blue-500 border-gray-300 rounded focus:ring-blue-500">
     </div>
 
+    <!-- Reset Button -->
+    <div class="mb-4">
+        <button wire:click="resetName"
+            class="px-4 py-2 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
+            Reset Name
+        </button>
+    </div>
+
     <!-- Input Fields -->
     <div class="space-y-4">
         <!-- Updates after a short delay (~150ms) or when input loses focus -->

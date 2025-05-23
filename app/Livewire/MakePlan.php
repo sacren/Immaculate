@@ -12,6 +12,11 @@ class MakePlan extends Component
 
     public $greetings = ['Hello!'];
 
+    public function resetName()
+    {
+        $this->name = 'The plan is ready.';
+    }
+
     public function render()
     {
         return view('livewire.make-plan');
