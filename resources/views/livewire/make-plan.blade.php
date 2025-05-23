@@ -1,9 +1,11 @@
 <div class="p-6 bg-white rounded-lg shadow-md text-gray-600">
     <!-- Display Name and ! -->
     <div class="mb-4 space-y-2">
-        @foreach ($greetings as $greeting)
-            <p class="text-lg font-medium">{{ $greeting }} {{ $name }}</p>
-        @endforeach
+        <ul>
+            @foreach ($greetings as $greeting)
+                <li class="text-lg font-medium">{{ $greeting }} {{ $name }}</li>
+            @endforeach
+        </ul>
 
         <span class="text-red-500 font-bold">
             @if ($shout)
