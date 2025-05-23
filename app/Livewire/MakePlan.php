@@ -12,9 +12,9 @@ class MakePlan extends Component
 
     public $greetings = ['Hello!'];
 
-    public function resetName()
+    public function resetName($name = 'The plan is ready.'): void
     {
-        $this->name = 'The plan is ready.';
+        $this->name = $name;
     }
 
     public function render()
