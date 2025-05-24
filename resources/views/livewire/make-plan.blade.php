@@ -22,24 +22,32 @@
     </div>
 
     <!-- Reset Button -->
-    <div class="mb-4 flex space-x-4">
+    <div class="mb-4 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
         <!-- Click Button -->
         <button wire:click="resetName('Bingo!')"
-            class="px-4 py-2 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
+            class="w-32 px-4 py-2 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
             Click Me
         </button>
 
         <!-- Hover Button -->
         <button wire:mouseenter="resetName('Eureka!')"
-            class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            class="w-32 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
             Hover Me
         </button>
 
         <!-- Press Enter Button -->
         <button wire:keydown.enter="resetName('America!')"
-            class="px-4 py-2 bg-green-500 text-white text-sm font-medium rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+            class="w-32 px-4 py-2 bg-green-500 text-white text-sm font-medium rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
             Press Me
         </button>
+
+        <!-- Submit Button -->
+        <form action="#" wire:submit.prevent="resetName('We have submitted the form!')">
+            <button type="submit"
+                class="w-32 px-4 py-2 bg-purple-500 text-white text-sm font-medium rounded hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                Submit Me
+            </button>
+        </form>
     </div>
 
     <!-- Input Fields -->
