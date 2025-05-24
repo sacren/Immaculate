@@ -24,7 +24,7 @@
     <!-- Reset Button -->
     <div class="mb-4 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
         <!-- Click Button -->
-        <button wire:click="resetName('Bingo!')"
+        <button wire:click="$set('name', 'Bingo!')"
             class="w-32 px-4 py-2 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
             Click Me
         </button>
