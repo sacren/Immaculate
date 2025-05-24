@@ -22,10 +22,23 @@
     </div>
 
     <!-- Reset Button -->
-    <div class="mb-4">
+    <div class="mb-4 flex space-x-4">
+        <!-- Click Button -->
         <button wire:click="resetName('Bingo!')"
             class="px-4 py-2 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
-            Reset Name
+            Click Me
+        </button>
+
+        <!-- Hover Button -->
+        <button wire:mouseenter="resetName('Eureka!')"
+            class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            Hover Me
+        </button>
+
+        <!-- Press Enter Button -->
+        <button wire:keydown.enter="resetName('America!')"
+            class="px-4 py-2 bg-green-500 text-white text-sm font-medium rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+            Press Me
         </button>
     </div>
 
