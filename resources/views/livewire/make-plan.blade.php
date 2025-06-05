@@ -41,6 +41,12 @@
             Press Me
         </button>
 
+        <!-- Leave Button -->
+        <button wire:mouseout="resetName($event.target.innerText)"
+            class="w-32 px-4 py-2 bg-cyan-500 text-white text-sm font-medium rounded hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+            Release Me
+        </button>
+
         <!-- Submit Button -->
         <form action="#" wire:submit.prevent="resetName('We have submitted the form!')">
             <button type="submit"
