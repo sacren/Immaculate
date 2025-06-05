@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class MakePlan extends Component
 {
-    public $name = "We're making a plan.";
+    public $name = null;
     public $shout = false;
     public $greetings = ['Hello!'];
 
@@ -15,9 +15,9 @@ class MakePlan extends Component
      *
      * @return void
      */
-    public function mount(): void
+    public function mount(string $name): void
     {
-        $this->name = 'Mounting the plan.';
+        $this->name = $name;
     }
 
     public function resetName($name = 'The plan is ready.'): void

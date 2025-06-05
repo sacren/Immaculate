@@ -20,7 +20,7 @@
 
     <div class="bg-white shadow-md rounded-lg p-6 mt-6">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 mt-6 mb-6">
-            <livewire:make-plan></livewire:make-plan>
+            <livewire:make-plan :name="'Mayflower Pilgrims'"></livewire:make-plan>
         </div>
     </div>
 </x-layouts.app>
