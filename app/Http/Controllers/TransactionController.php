@@ -12,7 +12,8 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        return view('transactions.index');
+        $name = 'Mayflower Pilgrims colonized America.';
+        return view('transactions.index', compact('name'));
     }
 
     /**
