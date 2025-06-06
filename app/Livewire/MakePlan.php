@@ -8,16 +8,17 @@ class MakePlan extends Component
 {
     public $name = null;
     public $shout = false;
-    public $greetings = ['Hello!'];
+    public $greetings = null;
 
     /**
      * Mount the component.
      *
      * @return void
      */
-    public function mount(string $name): void
+    public function mount(array $name): void
     {
-        $this->name = $name;
+        $this->name = $name['title'];
+        $this->greetings = $name['greetings'];
     }
 
     public function resetName($name = 'The plan is ready.'): void
