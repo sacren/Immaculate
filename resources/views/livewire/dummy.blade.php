@@ -1,4 +1,4 @@
-<div class="p-6 bg-blue-100 text-gray-800 rounded-lg shadow-md">
+<div>
     {{ __('The current time is') }} {{ now() }}
 
     <button wire:click="$refresh"

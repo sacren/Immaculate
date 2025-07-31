@@ -12,5 +12,7 @@
     </x-slot>
 
     <!-- Main Content -->
-    <livewire:dummy></livewire:dummy>
+    <div class="p-6 bg-blue-100 text-gray-800 rounded-lg shadow-md">
+        <livewire:dummy></livewire:dummy>
+    </div>
 </x-layouts.app>
