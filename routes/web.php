@@ -17,5 +17,4 @@ Route::get('/categories', function () {
 
 Route::resource('transactions', TransactionController::class);
 
-Route::view('dummy', 'dummy');
 Route::view('action', 'action');
