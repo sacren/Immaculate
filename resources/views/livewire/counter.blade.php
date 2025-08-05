@@ -3,11 +3,21 @@
         {{ __('Counter:') }} {{ $count }}
     </span>
 
-    <button wire:click="increment" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Increment
+    <button wire:click="increment"
+        class="bg-blue-500 hover:bg-blue-700 text-white
+                font-bold py-2 px-4 rounded">
+        +1
     </button>
 
-    <button wire:click="decrement" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-        Decrement
+    <button wire:click="decrement"
+        class="bg-red-500 hover:bg-red-700 text-white
+                font-bold py-2 px-4 rounded">
+        -1
+    </button>
+
+    <button wire:click="incrementBy(2)"
+        class="bg-blue-500 hover:bg-blue-700 text-white
+                font-bold py-2 px-4 rounded">
+        +2
     </button>
 </div>

@@ -18,6 +18,11 @@ class Counter extends Component
         $this->count--;
     }
 
+    public function incrementBy($number)
+    {
+        $this->count += (int) $number;
+    }
+
     public function render()
     {
         return view('livewire.counter');
