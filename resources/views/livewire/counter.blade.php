@@ -20,4 +20,7 @@
                 font-bold py-2 px-4 rounded">
         +{{ $step }}
     </button>
+    @if ($errorMessage)
+        <span class="text-red-500">{{ $errorMessage }}</span>
+    @endif
 </div>

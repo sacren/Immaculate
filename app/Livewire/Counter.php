@@ -8,6 +8,7 @@ class Counter extends Component
 {
     public $count = 0;
     public $step = 2;
+    public $errorMessage = '';
 
     public function increment()
     {
@@ -21,7 +22,15 @@ class Counter extends Component
 
     public function incrementBy($number)
     {
-        $this->count += (int) $number;
+        $number = filter_var($number, FILTER_VALIDATE_INT);
+        $this->errorMessage = '';
+
+        if ($number === false) {
+            $this->errorMessage = 'Invalid number';
+            return;
+        }
+
+        $this->count += $number;
     }
 
     public function render()
