@@ -15,12 +15,9 @@
         -1
     </button>
 
-    <button wire:click="incrementBy({{ $step }})"
+    <button wire:click="incrementBy"
         class="bg-blue-500 hover:bg-blue-700 text-white
                 font-bold py-2 px-4 rounded">
         +{{ $step }}
     </button>
-    @if ($errorMessage)
-        <span class="text-red-500">{{ $errorMessage }}</span>
-    @endif
 </div>
