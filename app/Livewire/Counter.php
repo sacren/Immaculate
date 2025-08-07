@@ -7,7 +7,13 @@ use Livewire\Component;
 class Counter extends Component
 {
     public $count = 0;
-    public $step = 2;
+    public $step;
+    private int $increment = 2;
+
+    public function mount()
+    {
+        $this->step = $this->increment;
+    }
 
     public function increment()
     {
@@ -21,7 +27,7 @@ class Counter extends Component
 
     public function incrementBy()
     {
-        $this->count += $this->step;
+        $this->count += $this->increment;
     }
 
     public function render()
