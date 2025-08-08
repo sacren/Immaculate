@@ -16,7 +16,13 @@ class TodoList extends Component
 
     public function add()
     {
-        $this->todos[] = $this->newTodo;
+        $trimmed = trim($this->newTodo);
+
+        if ($trimmed === '') {
+            return;
+        }
+
+        $this->todos[] = $trimmed;
         $this->newTodo = '';
     }
 
