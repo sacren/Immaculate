@@ -3,11 +3,11 @@
 
     <div class="flex flex-wrap gap-2 items-center">
         <div class="flex-1 min-w-0 max-w-md">
-            <input type="text"
+            <input type="text" wire:model="newTodo"
                 class="w-full px-3 py-2 bg-white border border-gray-300
                 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
-        <button type="button"
+        <button type="button" wire:click="add"
             class="bg-blue-500 hover:bg-blue-600 text-white
             font-medium px-4 py-2 rounded transition">
             {{ __('Add') }}
