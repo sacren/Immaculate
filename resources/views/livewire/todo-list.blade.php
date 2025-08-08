@@ -7,7 +7,8 @@
                 <label for="newTodo" class="sr-only">{{ __('Add New Todo') }}</label>
                 <input id="newTodo" type="text" wire:model="newTodo"
                     class="w-full px-3 py-2 bg-white border border-gray-300
-                    rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="{{ __('Add New Todo') }}">
                 @error('newTodo')
                     <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
                 @enderror
