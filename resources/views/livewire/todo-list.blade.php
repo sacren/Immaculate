@@ -6,6 +6,9 @@
             <input type="text" wire:model="newTodo"
                 class="w-full px-3 py-2 bg-white border border-gray-300
                 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            @error('newTodo')
+                <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
+            @enderror
         </div>
         <button type="button" wire:click="add"
             class="bg-blue-500 hover:bg-blue-600 text-white

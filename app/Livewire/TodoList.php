@@ -6,6 +6,14 @@ use Livewire\Component;
 
 class TodoList extends Component
 {
+    protected $rules = [
+        'newTodo' => [
+            'required',
+            'min:3',
+            'max:255',
+        ],
+    ];
+
     public $newTodo = '';
 
     public $todos = [
@@ -16,13 +24,8 @@ class TodoList extends Component
 
     public function add()
     {
-        $trimmed = trim($this->newTodo);
-
-        if ($trimmed === '') {
-            return;
-        }
-
-        $this->todos[] = $trimmed;
+        $this->validate();
+        $this->todos[] = trim($this->newTodo);
         $this->reset('newTodo');
     }
 
