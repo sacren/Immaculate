@@ -23,7 +23,7 @@ class TodoList extends Component
         }
 
         $this->todos[] = $trimmed;
-        $this->newTodo = '';
+        $this->reset('newTodo');
     }
 
     public function render()
