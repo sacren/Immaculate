@@ -15,12 +15,16 @@ class TodoList extends Component
     ];
 
     public $newTodo = '';
+    public $todos = [];
 
-    public $todos = [
-        'Buy milk',
-        'Buy bread',
-        'Buy eggs',
-    ];
+    public function mount()
+    {
+        $this->todos = [
+            'Buy milk',
+            'Buy bread',
+            'Buy eggs',
+        ];
+    }
 
     public function add()
     {
