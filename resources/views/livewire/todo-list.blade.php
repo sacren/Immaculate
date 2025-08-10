@@ -20,6 +20,13 @@
                     {{ __('Add') }}
                 </button>
             </div>
+            <div>
+                <button type="button" wire:click="remove"
+                    class="bg-red-500 hover:bg-red-600 text-white
+                    font-medium px-4 py-2 rounded transition">
+                    {{ __('Remove') }}
+                </button>
+            </div>
         </div>
     </form>
 

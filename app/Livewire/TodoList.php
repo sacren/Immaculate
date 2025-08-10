@@ -33,6 +33,11 @@ class TodoList extends Component
         $this->reset('newTodo');
     }
 
+    public function remove()
+    {
+        array_pop($this->todos);
+    }
+
     public function render()
     {
         return view('livewire.todo-list');
