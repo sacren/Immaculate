@@ -26,6 +26,11 @@ class TodoList extends Component
         ];
     }
 
+    public function updated($property, $value)
+    {
+        $this->$property = strtoupper($value);
+    }
+
     public function add()
     {
         $this->validate();
