@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TransactionController;
+use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,3 +19,5 @@ Route::get('/categories', function () {
 Route::resource('transactions', TransactionController::class);
 
 Route::view('action', 'action');
+
+Route::get('counter', Counter::class)->name('counter');
