@@ -4,21 +4,21 @@
 
         @if ($posts)
             @foreach ($posts as $post)
-                <article key="{{ $post['id'] }}"
+                <article key="{{ $post->id }}"
                     class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                     <!-- Header -->
                     <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-5">
-                        <h2 class="text-2xl font-bold">{{ $post['title'] }}</h2>
+                        <h2 class="text-2xl font-bold">{{ $post->title }}</h2>
                         <div class="mt-1 text-blue-100">
-                            By <span class="font-semibold">{{ $post['author'] }}</span>
-                            on {{ $post['created_at'] }}
+                            By <span class="font-semibold">{{ $post->author }}</span>
+                            on {{ $post->created_at }}
                         </div>
                     </header>
 
                     <!-- Body -->
                     <div class="p-6">
                         <div class="prose prose-lg max-w-none">
-                            <p>{{ $post['content'] }}</p>
+                            <p>{{ $post->content }}</p>
                         </div>
 
                         <!-- Footer -->
