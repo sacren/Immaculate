@@ -4,7 +4,7 @@
 
         @if ($posts)
             @foreach ($posts as $post)
-                <article key="{{ $post->id }}"
+                <article wire:key="{{ $post->id }}"
                     class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
                     <!-- Header -->
                     <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-5">
