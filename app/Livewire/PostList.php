@@ -13,8 +13,10 @@ class PostList extends Component
     {
     }
 
-    public function deletePost()
+    public function deletePost(Post $post)
     {
+        $this->authorize('delete', $post);
+        $post->delete();
     }
 
     public function render()

@@ -27,7 +27,7 @@
                                 class="text-blue-600 hover:underline font-medium mr-4">
                                 Edit
                             </button>
-                            <button type="button" wire:click="deletePost"
+                            <button type="button" wire:click="deletePost({{ $post->id }})"
                                 class="text-red-600 hover:underline font-medium">
                                 Delete
                             </button>
